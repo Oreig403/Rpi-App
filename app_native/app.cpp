@@ -1,21 +1,21 @@
 #include "app.h"
 #include "apps/apps_container.h"
-#include "sample_icon.h"
+#include "rpi_icon.h"
 #include "apps/i18n.h"
 #include <assert.h>
 
-namespace Sample {
+namespace Rpi {
 
 I18n::Message App::Descriptor::name() {
-  return I18n::Message::SampleApp;
+  return I18n::Message::RpiApp;
 }
 
 I18n::Message App::Descriptor::upperName() {
-  return I18n::Message::SampleAppCapital;
+  return I18n::Message::RpiAppCapital;
 }
 
 const Image * App::Descriptor::icon() {
-  return ImageStore::SampleIcon;
+  return ImageStore::RpiIcon;
 }
 
 App::Snapshot::Snapshot()
@@ -35,8 +35,8 @@ void App::Snapshot::reset() {
 }
 
 App::App(Snapshot * snapshot) :
-  ::App(snapshot, &m_sampleController),
-  m_sampleController(this)
+  ::App(snapshot, &m_rpiController),
+  m_rpiController(this)
 {
 }
 
