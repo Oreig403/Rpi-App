@@ -1,10 +1,10 @@
-#ifndef SAMPLE_APP_H
-#define SAMPLE_APP_H
+#ifndef RPI_APP_H
+#define RPI_APP_H
 
 #include <escher.h>
-#include "sample_controller.h"
+#include "rpi_controller.h"
 
-namespace Sample {
+namespace Rpi {
 
 class App : public ::App {
 public:
@@ -23,7 +23,7 @@ public:
   };
 private:
   App(Snapshot * snapshot);
-  SampleController m_sampleController;
+  rpiController m_rpiController;
 };
 
 }
